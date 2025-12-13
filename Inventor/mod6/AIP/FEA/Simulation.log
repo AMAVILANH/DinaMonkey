@@ -1,0 +1,106 @@
+﻿El estudio Análisis estático:1 ha empezado: 2/12/2025, 11:27:50 p. m.
+Número de configuraciones: 1
+Malla por defecto: 377 elementos, 837 nodos
+Tiempo de solución 0.2
+Tasa de convergencia: 24%
+Se ha alcanzado el número total de refinados h 
+El estudio        Worst Jacobian ratio :  1.52  on element 193 ha terminado: 2/12/2025, 11:27:51 p. m.
+Tiempo total 0:00:01
+
+El estudio Análisis estático:1 ha empezado: 2/12/2025, 11:28:17 p. m.
+Número de configuraciones: 1
+El estudio Análisis estático:1 ha terminado: 2/12/2025, 11:28:17 p. m.
+Tiempo total 0:00:00
+
+El estudio Análisis estático:1 ha empezado: 2/12/2025, 11:30:48 p. m.
+Número de configuraciones: 1
+Malla por defecto: 759 elementos, 1517 nodos
+Tiempo de solución 0.3
+Tasa de convergencia: 25%
+Se ha alcanzado el número total de refinados h 
+El estudio        Worst Jacobian ratio :  1.92  on element 682 ha terminado: 2/12/2025, 11:30:49 p. m.
+Tiempo total 0:00:01
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 12:33:01 a. m.
+Número de configuraciones: 1
+Malla por defecto: 534 elementos, 1164 nodos
+Tiempo de solución 0.4
+Tasa de convergencia: 0%
+El problema ha convergido 
+El estudio        Worst Jacobian ratio :  1.89  on element 292 ha terminado: 3/12/2025, 12:33:02 a. m.
+Tiempo total 0:00:01
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 7:58:10 a. m.
+Número de configuraciones: 1
+Malla por defecto: 301 elementos, 699 nodos
+Tiempo de solución 0.2
+Tasa de convergencia: 27%
+Se ha alcanzado el número total de refinados h 
+El estudio        Worst Jacobian ratio :  1.96  on element 227 ha terminado: 3/12/2025, 7:58:11 a. m.
+Tiempo total 0:00:01
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 7:58:25 a. m.
+Número de configuraciones: 1
+Malla por defecto: 301 elementos, 699 nodos
+Tiempo de solución 0.2
+Tasa de convergencia: 27%
+Se ha alcanzado el número total de refinados h 
+El estudio Análisis estático:1 ha terminado: 3/12/2025, 7:58:26 a. m.
+Tiempo total 0:00:01
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 7:59:38 a. m.
+Número de configuraciones: 1
+Malla por defecto: 301 elementos, 699 nodos
+Tiempo de solución 0.2
+Tasa de convergencia: 27%
+Se ha alcanzado el número total de refinados h 
+El estudio Análisis estático:1 ha terminado: 3/12/2025, 7:59:38 a. m.
+Tiempo total 0:00:00
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 8:05:54 a. m.
+Número de configuraciones: 1
+Malla por defecto: 1457 elementos, 2693 nodos
+Tiempo de solución 0.4
+Tasa de convergencia: 29%
+Se ha alcanzado el número total de refinados h 
+El estudio        Worst Jacobian ratio :  2.48  on element 1243 ha terminado: 3/12/2025, 8:05:56 a. m.
+Tiempo total 0:00:02
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 8:08:37 a. m.
+Número de configuraciones: 1
+Malla por defecto: 521 elementos, 1089 nodos
+El estudio        Worst Jacobian ratio :  1.62  on element 364 ha terminado: 3/12/2025, 8:08:37 a. m.
+Tiempo total 0:00:00
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 8:08:47 a. m.
+Número de configuraciones: 1
+Malla por defecto: 521 elementos, 1089 nodos
+Tiempo de solución 0.3
+Tasa de convergencia: 12%
+Se ha alcanzado el número total de refinados h 
+El estudio        Worst Jacobian ratio :  1.62  on element 364 ha terminado: 3/12/2025, 8:08:49 a. m.
+Tiempo total 0:00:02
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 8:09:03 a. m.
+Número de configuraciones: 1
+El estudio Análisis estático:1 ha terminado: 3/12/2025, 8:09:03 a. m.
+Tiempo total 0:00:00
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 8:32:05 a. m.
+Número de configuraciones: 1
+Malla por defecto: 1631 elementos, 3046 nodos
+Tiempo de solución 0.4
+Tasa de convergencia: 12%
+Se ha alcanzado el número total de refinados h 
+El estudio        Worst Jacobian ratio :  2.43  on element 799 ha terminado: 3/12/2025, 8:32:06 a. m.
+Tiempo total 0:00:01
+
+El estudio Análisis estático:1 ha empezado: 3/12/2025, 8:33:20 a. m.
+Número de configuraciones: 1
+Malla por defecto: 1831 elementos, 3407 nodos
+Tiempo de solución 0.5
+Tasa de convergencia: 11%
+Se ha alcanzado el número total de refinados h 
+El estudio        Worst Jacobian ratio :  3.09  on element 141 ha terminado: 3/12/2025, 8:33:21 a. m.
+Tiempo total 0:00:01
+
