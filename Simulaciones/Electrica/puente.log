@@ -1,0 +1,20 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\ANDRES\Documents\Universidad\Sensores y actuadores\Proyecto final\Dinamonkey\Simulaciones\Electrica\puente.net
+Start Time: Mon Dec 15 08:27:58 2025
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration for .op point succeeded.
+.step kg=0
+.step kg=1
+.step kg=5
+.step kg=10
+.step kg=20
+.step kg=66
+Total elapsed time: 2.696 seconds.
+
+Files loaded:
+C:\Users\ANDRES\Documents\Universidad\Sensores y actuadores\Proyecto final\Dinamonkey\Simulaciones\Electrica\puente.net
+
