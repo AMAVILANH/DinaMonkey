@@ -1,0 +1,20 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\ANDRES\Documents\Universidad\Sensores y actuadores\Proyecto final\Dinamonkey\Simulaciones\Electrica\puente_calibrado.net
+Start Time: Mon Dec 15 14:31:33 2025
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration for .op point succeeded.
+.step n=0
+.step n=500
+.step n=1000
+.step n=2000
+.step n=3000
+.step n=4000
+Total elapsed time: 12.047 seconds.
+
+Files loaded:
+C:\Users\ANDRES\Documents\Universidad\Sensores y actuadores\Proyecto final\Dinamonkey\Simulaciones\Electrica\puente_calibrado.net
+

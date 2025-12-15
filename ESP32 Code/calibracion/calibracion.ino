@@ -1,6 +1,6 @@
 /*
  * DINAMÓMETRO ESP32 + ADS1232
- * UNIDAD FINAL: kN
+ * SALIDA: kN (estable)
  */
 
 #include <Arduino.h>
@@ -8,20 +8,20 @@
 const int PIN_DOUT = 16;
 const int PIN_SCLK = 17;
 
-// ====== CALIBRACIÓN REAL ======
-const float OFFSET_RAW = 82000.0;        // raw a 0 kg
-const float COUNTS_PER_N = 102.0;         // sensibilidad real
+// ====== CALIBRACIÓN ======
+float offset_raw = 82000.0;
+const float COUNTS_PER_N = 102.0;
 
 // ====== FILTRO ======
-const float ALPHA = 0.1;
+const float ALPHA = 0.02;
 
 // ====== VARIABLES ======
 float fuerza_filtrada_N = 0.0;
 float tara_N = 0.0;
-bool modoCSV = false;
 
 // ====== PROTOTIPOS ======
 long readADS1232_raw();
+long readADS1232_avg(uint8_t n);
 
 void setup() {
   Serial.begin(115200);
@@ -31,59 +31,60 @@ void setup() {
   pinMode(PIN_SCLK, OUTPUT);
   digitalWrite(PIN_SCLK, LOW);
 
-  Serial.println("\n--- DINAMÓMETRO (kN) ---");
-  Serial.println("Comandos:");
-  Serial.println(" t  -> Tara (0 kN)");
-  Serial.println(" g  -> Toggle CSV");
-  Serial.println("-----------------------");
+  Serial.println("\n--- DINAMÓMETRO kN ---");
+  Serial.println(" t -> Tara");
+  Serial.println("----------------------");
 }
 
 void loop() {
 
-  // ---- COMANDOS ----
-  if (Serial.available()) {
-    char c = Serial.read();
-    if (c == 't' || c == 'T') {
-      tara_N = fuerza_filtrada_N;
-      Serial.println("[TARA] OK");
-    }
-    if (c == 'g' || c == 'G') {
-      modoCSV = !modoCSV;
-    }
+// ---- COMANDOS ----
+if (Serial.available()) {
+  char c = Serial.read();
+  if (c == 't' || c == 'T') {
+    tara_N += fuerza_filtrada_N;
+    fuerza_filtrada_N = 0.0;
+    Serial.println("[TARA] OK");
   }
+}
 
-  long raw = readADS1232_raw();
+
+  // ---- LECTURA ESTABLE ----
+  long raw = readADS1232_avg(8);   // PROMEDIO
   if (raw == -999) return;
 
-  // ---- FUERZA SIN FILTRAR ----
-  float fuerza_N = (raw - OFFSET_RAW) / COUNTS_PER_N;
+  // ---- FUERZA ----
+  float fuerza_N = (raw - offset_raw) / COUNTS_PER_N;
   fuerza_N -= tara_N;
 
-  // ---- FILTRO EN FUERZA ----
+  // ---- FILTRO ----
   fuerza_filtrada_N += ALPHA * (fuerza_N - fuerza_filtrada_N);
 
   float fuerza_kN = fuerza_filtrada_N / 1000.0;
 
-  if (modoCSV) {
-    Serial.print(millis()); Serial.print(",");
-    Serial.print(raw); Serial.print(",");
-    Serial.println(fuerza_kN, 3);
-  } else {
-    Serial.print("RAW: ");
-    Serial.print(raw);
-    Serial.print(" | F: ");
-    Serial.print(fuerza_kN, 2);
-    Serial.println(" kN");
-  }
+  Serial.print("RAW: ");
+  Serial.print(raw);
+  Serial.print(" | F: ");
+  Serial.print(fuerza_kN, 2);
+  Serial.println(" kN");
+}
 
-  delay(50);
+// ====== PROMEDIO ======
+long readADS1232_avg(uint8_t n) {
+  long suma = 0;
+  for (uint8_t i = 0; i < n; i++) {
+    long v = readADS1232_raw();
+    if (v == -999) return -999;
+    suma += v;
+  }
+  return suma / n;
 }
 
 // ====== DRIVER ADS1232 ======
 long readADS1232_raw() {
   unsigned long t0 = millis();
   while (digitalRead(PIN_DOUT) == HIGH) {
-    if (millis() - t0 > 150) return -999;
+    if (millis() - t0 > 200) return -999;
   }
 
   long raw = 0;
